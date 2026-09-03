@@ -6,6 +6,12 @@ import p2 from "@/assets/projekt-2.jpg.asset.json";
 import p3 from "@/assets/projekt-3.jpg.asset.json";
 import p4 from "@/assets/projekt-4.jpg.asset.json";
 import p5 from "@/assets/projekt-5.jpg.asset.json";
+import beforeGarden from "@/assets/before-garden.jpg";
+import afterGarden from "@/assets/after-garden.jpg";
+import beforeKitchen from "@/assets/before-kitchen.jpg";
+import afterKitchen from "@/assets/after-kitchen.jpg";
+import beforeWindows from "@/assets/before-windows.jpg";
+import afterWindows from "@/assets/after-windows.jpg";
 
 export const Route = createFileRoute("/projekt")({
   head: () => ({
