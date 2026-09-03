@@ -6,10 +6,9 @@ import { services } from "@/lib/services";
 import logo from "@/assets/logo.png";
 import hero from "@/assets/hero-home.jpg";
 import seniorCare from "@/assets/senior-care.jpg";
-import beforeKitchen from "@/assets/before-kitchen.jpg";
-import afterKitchen from "@/assets/after-kitchen.jpg";
-import beforeGarden from "@/assets/before-garden.jpg";
-import afterGarden from "@/assets/after-garden.jpg";
+import p2 from "@/assets/projekt-2.jpg.asset.json";
+import p3 from "@/assets/projekt-3.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
