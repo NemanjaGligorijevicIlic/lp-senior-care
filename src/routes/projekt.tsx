@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { useLang } from "@/lib/i18n";
-import p1 from "@/assets/projekt-1.jpg.asset.json";
-import p2 from "@/assets/projekt-2.jpg.asset.json";
-import p3 from "@/assets/projekt-3.jpg.asset.json";
-import p4 from "@/assets/projekt-4.jpg.asset.json";
-import p5 from "@/assets/projekt-5.jpg.asset.json";
+import p1 from "@/assets/projekt-1.jpg";
+import p2 from "@/assets/projekt-2.jpg";
+import p3 from "@/assets/projekt-3.jpg";
+import p4 from "@/assets/projekt-4.jpg";
+import p5 from "@/assets/projekt-5.jpg";
 import beforeGarden from "@/assets/before-garden.jpg";
 import afterGarden from "@/assets/after-garden.jpg";
 import beforeKitchen from "@/assets/before-kitchen.jpg";
