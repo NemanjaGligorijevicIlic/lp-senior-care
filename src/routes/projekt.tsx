@@ -34,8 +34,34 @@ export const Route = createFileRoute("/projekt")({
   component: ProjectsPage,
 });
 
-const projects = [
+type Project =
+  | { kind: "pair"; before: string; after: string; title: string; desc: string }
+  | { kind: "single"; image: string; title: string; desc: string };
+
+const projects: Project[] = [
   {
+    kind: "pair",
+    before: beforeGarden,
+    after: afterGarden,
+    title: "Trädgårdsuppfräschning",
+    desc: "Före: igenvuxen och överväxt. Efter: rensat, klippt och redo att njutas i.",
+  },
+  {
+    kind: "pair",
+    before: beforeKitchen,
+    after: afterKitchen,
+    title: "Köksstädning",
+    desc: "Före: dagligt slitage. Efter: skinande ytor och ett kök som känns nytt.",
+  },
+  {
+    kind: "pair",
+    before: beforeWindows,
+    after: afterWindows,
+    title: "Fönsterputs",
+    desc: "Före: smuts och strimmor. Efter: kristallklara fönster som släpper in ljuset.",
+  },
+  {
+    kind: "single",
     image: p1.url,
     title: "Häckklippning i Limhamn",
     desc: "Nedklippning av kraftigt växande murgröna och häck runt fasaden — allt trädgårdsavfall bortforslat efteråt.",
