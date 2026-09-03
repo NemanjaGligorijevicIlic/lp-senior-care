@@ -260,66 +260,25 @@ function Index() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <BeforeAfter
-            before={beforeKitchen}
-            after={afterKitchen}
-            title="Kökssanering i Limhamn"
-            t={t}
+          <ProjectCard
+            image={p2.url}
+            title="Ogräsrensning av rabatt & gång"
           />
-          <BeforeAfter
-            before={beforeGarden}
-            after={afterGarden}
-            title="Höstfix i trädgården"
-            t={t}
-          />
+          <ProjectCard image={p3.url} title="Högtryckstvätt av altan" />
         </div>
       </section>
     </Layout>
   );
 }
 
-function BeforeAfter({
-  before,
-  after,
-  title,
-  t,
-}: {
-  before: string;
-  after: string;
-  title: string;
-  t: (k: string) => string;
-}) {
+function ProjectCard({ image, title }: { image: string; title: string }) {
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-3">
-        <div className="relative aspect-square overflow-hidden rounded-2xl ring-1 ring-border">
-          <img
-            src={before}
-            alt="Före"
-            loading="lazy"
-            width={1024}
-            height={1024}
-            className="size-full object-cover"
-          />
-          <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/90 backdrop-blur text-[10px] font-bold tracking-widest text-foreground">
-            {t("projects.before")}
-          </span>
-        </div>
-        <div className="relative aspect-square overflow-hidden rounded-2xl ring-1 ring-border">
-          <img
-            src={after}
-            alt="Efter"
-            loading="lazy"
-            width={1024}
-            height={1024}
-            className="size-full object-cover"
-          />
-          <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-bold tracking-widest">
-            {t("projects.after")}
-          </span>
-        </div>
+      <div className="overflow-hidden rounded-3xl ring-1 ring-border shadow-card bg-surface">
+        <img src={image} alt={title} loading="lazy" className="w-full h-auto object-cover" />
       </div>
       <h4 className="font-display text-2xl pl-1">{title}</h4>
     </div>
   );
 }
+
