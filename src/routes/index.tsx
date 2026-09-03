@@ -260,10 +260,10 @@ function Index() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectCard
-            image={p2.url}
+            image={p2}
             title="Ogräsrensning av rabatt & gång"
           />
-          <ProjectCard image={p3.url} title="Högtryckstvätt av altan" />
+          <ProjectCard image={p3} title="Högtryckstvätt av altan" />
         </div>
       </section>
     </Layout>
