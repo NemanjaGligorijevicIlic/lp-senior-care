@@ -1,12 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { useLang } from "@/lib/i18n";
-import beforeKitchen from "@/assets/before-kitchen.jpg";
-import afterKitchen from "@/assets/after-kitchen.jpg";
-import beforeGarden from "@/assets/before-garden.jpg";
-import afterGarden from "@/assets/after-garden.jpg";
-import beforeWindows from "@/assets/before-windows.jpg";
-import afterWindows from "@/assets/after-windows.jpg";
+import p1 from "@/assets/projekt-1.jpg.asset.json";
+import p2 from "@/assets/projekt-2.jpg.asset.json";
+import p3 from "@/assets/projekt-3.jpg.asset.json";
+import p4 from "@/assets/projekt-4.jpg.asset.json";
+import p5 from "@/assets/projekt-5.jpg.asset.json";
 
 export const Route = createFileRoute("/projekt")({
   head: () => ({
@@ -17,6 +16,12 @@ export const Route = createFileRoute("/projekt")({
         content: "Se före- och efterbilder från projekt utförda av Limhamns Hemhjälp AB.",
       },
       { property: "og:title", content: "Projekt — Före & Efter | Limhamns Hemhjälp" },
+      {
+        property: "og:description",
+        content: "Riktiga bilder från häckklippning, ogräsrensning, altantvätt och trädgårdsfix.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/projekt" }],
   }),
@@ -25,22 +30,29 @@ export const Route = createFileRoute("/projekt")({
 
 const projects = [
   {
-    title: "Kökssanering i Limhamn",
-    desc: "Genomgående djuprengöring av kök efter längre tids försummelse.",
-    before: beforeKitchen,
-    after: afterKitchen,
+    image: p1.url,
+    title: "Häckklippning i Limhamn",
+    desc: "Nedklippning av kraftigt växande murgröna och häck runt fasaden — allt trädgårdsavfall bortforslat efteråt.",
   },
   {
-    title: "Trädgårdsupprustning",
-    desc: "Klippning, ogräsrensning och nya rabatter i en villaträdgård.",
-    before: beforeGarden,
-    after: afterGarden,
+    image: p2.url,
+    title: "Ogräsrensning av rabatt & gång",
+    desc: "Rensning av rabatt, kantsten och plattgång. Ytan blev ren, öppen och lätt att sköta.",
   },
   {
-    title: "Fönsterputs på kontor",
-    desc: "Kristallklara fönster i en kontorslokal i centrala Malmö.",
-    before: beforeWindows,
-    after: afterWindows,
+    image: p3.url,
+    title: "Högtryckstvätt av altan",
+    desc: "Trädäck rengjort med högtryckstvätt — träet fick tillbaka sin naturliga färg.",
+  },
+  {
+    image: p4.url,
+    title: "Altangång — tvätt & upprensning",
+    desc: "Smal altangång rengjord från alger och smuts, med rensade kanter mot gräsmattan.",
+  },
+  {
+    image: p5.url,
+    title: "Uteplats & häck i ordning",
+    desc: "Häcken formklippt och uteplatsen uppstädad — redo för fika i solen.",
   },
 ];
 
@@ -70,24 +82,13 @@ function ProjectsPage() {
               i % 2 === 1 ? "lg:[&>:first-child]:order-2" : ""
             }`}
           >
-            <div className="grid grid-cols-2 gap-3">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-border">
-                <img
-                  src={p.before}
-                  alt="Före"
-                  loading="lazy"
-                  className="size-full object-cover"
-                />
-                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/90 backdrop-blur text-[10px] font-bold tracking-widest text-foreground">
-                  {t("projects.before")}
-                </span>
-              </div>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-border">
-                <img src={p.after} alt="Efter" loading="lazy" className="size-full object-cover" />
-                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-bold tracking-widest">
-                  {t("projects.after")}
-                </span>
-              </div>
+            <div className="overflow-hidden rounded-3xl ring-1 ring-border shadow-card bg-surface">
+              <img
+                src={p.image}
+                alt={p.title}
+                loading="lazy"
+                className="w-full h-auto object-cover"
+              />
             </div>
             <div>
               <div className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
