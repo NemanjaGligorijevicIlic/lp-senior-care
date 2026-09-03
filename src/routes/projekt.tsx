@@ -118,14 +118,35 @@ function ProjectsPage() {
               i % 2 === 1 ? "lg:[&>:first-child]:order-2" : ""
             }`}
           >
-            <div className="overflow-hidden rounded-3xl ring-1 ring-border shadow-card bg-surface">
-              <img
-                src={p.image}
-                alt={p.title}
-                loading="lazy"
-                className="w-full h-auto object-cover"
-              />
-            </div>
+            {p.kind === "pair" ? (
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { src: p.before, label: t("projects.before") },
+                  { src: p.after, label: t("projects.after") },
+                ].map((img) => (
+                  <div key={img.label} className="relative overflow-hidden rounded-3xl ring-1 ring-border shadow-card bg-surface">
+                    <img
+                      src={img.src}
+                      alt={`${p.title} — ${img.label}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover aspect-[4/5]"
+                    />
+                    <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/90 text-xs font-bold uppercase tracking-wider text-foreground">
+                      {img.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="overflow-hidden rounded-3xl ring-1 ring-border shadow-card bg-surface">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            )}
             <div>
               <div className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
                 Projekt {String(i + 1).padStart(2, "0")}
