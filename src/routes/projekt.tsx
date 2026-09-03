@@ -67,21 +67,25 @@ const projects: Project[] = [
     desc: "Nedklippning av kraftigt växande murgröna och häck runt fasaden — allt trädgårdsavfall bortforslat efteråt.",
   },
   {
+    kind: "single",
     image: p2.url,
     title: "Ogräsrensning av rabatt & gång",
     desc: "Rensning av rabatt, kantsten och plattgång. Ytan blev ren, öppen och lätt att sköta.",
   },
   {
+    kind: "single",
     image: p3.url,
     title: "Högtryckstvätt av altan",
     desc: "Trädäck rengjort med högtryckstvätt — träet fick tillbaka sin naturliga färg.",
   },
   {
+    kind: "single",
     image: p4.url,
     title: "Altangång — tvätt & upprensning",
     desc: "Smal altangång rengjord från alger och smuts, med rensade kanter mot gräsmattan.",
   },
   {
+    kind: "single",
     image: p5.url,
     title: "Uteplats & häck i ordning",
     desc: "Häcken formklippt och uteplatsen uppstädad — redo för fika i solen.",
