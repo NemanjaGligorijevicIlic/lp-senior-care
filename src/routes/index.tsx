@@ -6,8 +6,8 @@ import { services } from "@/lib/services";
 import logo from "@/assets/logo.png";
 import hero from "@/assets/hero-home.jpg";
 import seniorCare from "@/assets/senior-care.jpg";
-import p2 from "@/assets/projekt-2.jpg.asset.json";
-import p3 from "@/assets/projekt-3.jpg.asset.json";
+import p2 from "@/assets/projekt-2.jpg";
+import p3 from "@/assets/projekt-3.jpg";
 
 
 export const Route = createFileRoute("/")({
@@ -260,10 +260,10 @@ function Index() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectCard
-            image={p2.url}
+            image={p2}
             title="Ogräsrensning av rabatt & gång"
           />
-          <ProjectCard image={p3.url} title="Högtryckstvätt av altan" />
+          <ProjectCard image={p3} title="Högtryckstvätt av altan" />
         </div>
       </section>
     </Layout>

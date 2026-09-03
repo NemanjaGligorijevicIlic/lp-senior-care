@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { useLang } from "@/lib/i18n";
-import p1 from "@/assets/projekt-1.jpg.asset.json";
-import p2 from "@/assets/projekt-2.jpg.asset.json";
-import p3 from "@/assets/projekt-3.jpg.asset.json";
-import p4 from "@/assets/projekt-4.jpg.asset.json";
-import p5 from "@/assets/projekt-5.jpg.asset.json";
+import p1 from "@/assets/projekt-1.jpg";
+import p2 from "@/assets/projekt-2.jpg";
+import p3 from "@/assets/projekt-3.jpg";
+import p4 from "@/assets/projekt-4.jpg";
+import p5 from "@/assets/projekt-5.jpg";
 import beforeGarden from "@/assets/before-garden.jpg";
 import afterGarden from "@/assets/after-garden.jpg";
 import beforeKitchen from "@/assets/before-kitchen.jpg";
@@ -62,31 +62,31 @@ const projects: Project[] = [
   },
   {
     kind: "single",
-    image: p1.url,
+    image: p1,
     title: "Häckklippning i Limhamn",
     desc: "Nedklippning av kraftigt växande murgröna och häck runt fasaden — allt trädgårdsavfall bortforslat efteråt.",
   },
   {
     kind: "single",
-    image: p2.url,
+    image: p2,
     title: "Ogräsrensning av rabatt & gång",
     desc: "Rensning av rabatt, kantsten och plattgång. Ytan blev ren, öppen och lätt att sköta.",
   },
   {
     kind: "single",
-    image: p3.url,
+    image: p3,
     title: "Högtryckstvätt av altan",
     desc: "Trädäck rengjort med högtryckstvätt — träet fick tillbaka sin naturliga färg.",
   },
   {
     kind: "single",
-    image: p4.url,
+    image: p4,
     title: "Altangång — tvätt & upprensning",
     desc: "Smal altangång rengjord från alger och smuts, med rensade kanter mot gräsmattan.",
   },
   {
     kind: "single",
-    image: p5.url,
+    image: p5,
     title: "Uteplats & häck i ordning",
     desc: "Häcken formklippt och uteplatsen uppstädad — redo för fika i solen.",
   },
